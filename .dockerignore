@@ -1,0 +1,23 @@
+# Virtual environment
+admin-env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Local agent data (sessions, signups) - starts fresh on deploy
+agent1q*_data.json
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Docker
+docker-compose.yml
+Dockerfile
