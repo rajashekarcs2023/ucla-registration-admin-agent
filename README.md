@@ -130,10 +130,10 @@ AGENT_NAME="UCLA_PS_AdminAgent"
 AGENT_PORT="8048"
 AGENT_SEED="UCLA-PS-TICKETING-AGENT"
 ADMIN_PASSPHRASE="<your-passphrase>"
-UBS_AGENT_ADDRESS="agent1qf6a22yerur7gxm2jfgg3nn484tar5vx36p3gvy9f0awnhwd7ajgsfax6tm"
+UBS_AGENT_ADDRESS="<your-ubs-agent-address>"
 OPENAI_API_KEY="sk-..."
-EVENTBRITE_OAUTH_TOKEN="HGVWABGALVGRRUB64ZJG"
-EVENTBRITE_EVENT_ID="1985241779604"
+EVENTBRITE_OAUTH_TOKEN="<your-eventbrite-oauth-token>"
+EVENTBRITE_EVENT_ID="<your-eventbrite-event-id>"
 ```
 
 ### Running Locally
