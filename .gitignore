@@ -1,0 +1,5 @@
+admin-env/
+.venv/
+*.log
+*.json 
+.env

@@ -1,0 +1,16 @@
+# Core agent + chat protocols
+uagents==0.24
+uagents-core>=0.4.3
+
+# OpenAI for tool-calling
+openai==1.107.1
+
+# HTTP client
+httpx==0.27.2
+
+# Environment variables
+python-dotenv==1.0.1
+
+# Data validation
+pydantic==2.10.6
+

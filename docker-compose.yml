@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  admin-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ucla-ps-admin-agent
+    restart: unless-stopped
+    ports:
+      - "8048:8048"
+    env_file:
+      - .env
+    environment:
+      - AGENT_PORT=8048
+    volumes:
+      # Mount .env file if you want to edit it without rebuilding
+      - ./.env:/app/.env:ro
+      # Persist agent data (signups, sessions) across redeploys
+      - ./agent_data:/app/agent_data
+    networks:
+      - agent-network
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import socket; s=socket.socket(); s.connect(('localhost', 8048)); s.close()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  agent-network:
+    driver: bridge
+
